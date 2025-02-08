@@ -1,0 +1,162 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* Amazon background color */
+  color: #333333; /* Amazon font color */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #232F3E; /* Amazon header background color */
+  color: rgb(7, 7, 7);
+  padding: 1em;
+  text-align: center;
+}
+
+.heading {
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading .logo h1 {
+  font-size: 24px;
+}
+
+.heading nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.heading nav ul li {
+  margin-right: 20px;
+}
+
+.heading nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+main {
+  padding: 2em 0;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+form {
+  margin-bottom: 1em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 220px;
+  margin-bottom: 0.5em;
+  color: #333333; /* Amazon label font color */
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1em;
+  width: calc(100% - 230px);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #FF9900; /* Amazon button background color */
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #E68A00; /* Amazon button hover color */
+}
+
+.hidden {
+  display: none;
+}
+
+.thresholds-table {
+  margin-top: 2em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.thresholds-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.thresholds-table th, .thresholds-table td {
+  padding: 1em;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: #f7f7f7;
+}
+
+.thresholds-table th {
+  background-color: #232F3E; /* Amazon table header background color */
+  color: white;
+}
+
+.thresholds-table td:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.chart {
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#thresholdInputs {
+  padding: 20px;
+  border-radius: 10px;
+}
+

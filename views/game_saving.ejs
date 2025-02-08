@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Savings</title>
+    <link rel="stylesheet" href="styles/game_saving.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <div style="margin-left: 3vh;">
+        <h1>Shopping Savings</h1>
+    </div>
+    <main>
+        <div class="container">
+            <a href="#" class="box">
+                <h2>Your Savings : <%= locals.savings %></h2>
+                <p>Track your savings on various products.</p>
+            </a>
+            <a href="#" class="box">
+                <h2>Shopaholic Saver's Badges : <%= locals.badges %></h2>
+                <p>Earn badges for your saving milestones.</p>
+            </a>
+            <a href="/offer" class="box">
+                <h2>Your Offers</h2>
+                <p>Explore exclusive offers just for you.</p>
+            </a>
+        </div>
+        <div class="button-container">
+            <button id="showChartButton">Display Bar Graph for Savings</button>
+        </div>
+        <div class="chart-container" id="chartContainer" style="display: none;">
+            <canvas id="savingsChart"></canvas>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+    <script src="scripts/game_saving.js"></script>
+</body>
+</html>

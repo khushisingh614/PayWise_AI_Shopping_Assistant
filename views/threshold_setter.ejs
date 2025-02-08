@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Threshold Setter</title>
+    <link rel="stylesheet" href="/styles/threshold_setter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <div style="margin-left: 3vh;">
+        <h1>Amazon Threshold Setter</h1>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li ><a href="#inputSection" style="color: black;">Set or change threshold limits</a></li>
+                <li><a href="#visualizations" style="color: black;">Graphical Illustrations</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="inputSection">
+            <div class="container">
+                <h2>Set Your Thresholds</h2>
+                <div id="thresholdInputs">
+                    <!-- Monthly Thresholds -->
+                    <div class="form-group">
+                        <form id="thresholdFormElectronicsMonthly" action="/add_threshold" method="post">
+                            <img src="images/electronics.png" alt="Electronics Icon" class="icon">
+                            <label for="thresholdElectronicsMonthly">Monthly Electronics Threshold:</label>
+                            <input type="number" id="thresholdElectronicsMonthly" name="thresholdElectronicsMonthly" required>
+                            <button type="submit">Add Monthly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormClothingMonthly" action="/add_threshold" method="post">
+                            <img src="images/clothing.png" alt="Clothing Icon" class="icon">
+                            <label for="thresholdClothingMonthly">Monthly Clothing Threshold:</label>
+                            <input type="number" id="thresholdClothingMonthly" name="thresholdClothingMonthly" required>
+                            <button type="submit">Add Monthly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormHouseholdMonthly" action="/add_threshold" method="post">
+                            <img src="images/household.png" alt="Household Icon" class="icon">
+                            <label for="thresholdHouseholdMonthly">Monthly Household Threshold:</label>
+                            <input type="number" id="thresholdHouseholdMonthly" name="thresholdHouseholdMonthly" required>
+                            <button type="submit">Add Monthly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormGroceryMonthly" action="/add_threshold" method="post">
+                            <img src="images/grocery.png" alt="Grocery Icon" class="icon">
+                            <label for="thresholdGroceryMonthly">Monthly Grocery Threshold:</label>
+                            <input type="number" id="thresholdGroceryMonthly" name="thresholdGroceryMonthly" required>
+                            <button type="submit">Add Monthly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormOthersMonthly" action="/add_threshold" method="post">
+                            <img src="images/others.png" alt="Others Icon" class="icon">
+                            <label for="thresholdOthersMonthly">Monthly Others Threshold:</label>
+                            <input type="number" id="thresholdOthersMonthly" name="thresholdOthersMonthly" required>
+                            <button type="submit">Add Monthly Threshold</button>
+                        </form>
+                    </div>
+
+                    <!-- Yearly Thresholds -->
+                    <div class="form-group">
+                        <form id="thresholdFormElectronicsYearly" action="/add_threshold" method="post">
+                            <img src="images/electronics.png" alt="Electronics Icon" class="icon">
+                            <label for="thresholdElectronicsYearly">Yearly Electronics Threshold:</label>
+                            <input type="number" id="thresholdElectronicsYearly" name="thresholdElectronicsYearly" required>
+                            <button type="submit">Add Yearly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormClothingYearly" action="/add_threshold" method="post">
+                            <img src="images/clothing.png" alt="Clothing Icon" class="icon">
+                            <label for="thresholdClothingYearly">Yearly Clothing Threshold:</label>
+                            <input type="number" id="thresholdClothingYearly" name="thresholdClothingYearly" required>
+                            <button type="submit">Add Yearly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormHouseholdYearly" action="/add_threshold" method="post">
+                            <img src="images/household.png" alt="Household Icon" class="icon">
+                            <label for="thresholdHouseholdYearly">Yearly Household Threshold:</label>
+                            <input type="number" id="thresholdHouseholdYearly" name="thresholdHouseholdYearly" required>
+                            <button type="submit">Add Yearly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormGroceryYearly" action="/add_threshold" method="post">
+                            <img src="images/grocery.png" alt="Grocery Icon" class="icon">
+                            <label for="thresholdGroceryYearly">Yearly Grocery Threshold:</label>
+                            <input type="number" id="thresholdGroceryYearly" name="thresholdGroceryYearly" required>
+                            <button type="submit">Add Yearly Threshold</button>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form id="thresholdFormOthersYearly" action="/add_threshold" method="post">
+                            <img src="images/others.png" alt="Others Icon" class="icon">
+                            <label for="thresholdOthersYearly">Yearly Others Threshold:</label>
+                            <input type="number" id="thresholdOthersYearly" name="thresholdOthersYearly" required>
+                            <button type="submit">Add Yearly Threshold</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="visualizations">
+            <div class="container">
+                <h2>Comparisons</h2>
+                <div class="thresholds-table">
+                    <h3>Threshold Amounts</h3>
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Monthly Threshold</th>
+                                <th>Yearly Threshold</th>
+                            </tr>
+                        </thead>
+                        <tbody id="setThresholdsBody">
+                             <% for(let i = 0 ; i < locals.cat.length ; i++){ %>
+                                    <tr>
+                                        <th><%=locals.cat[i]%></th>
+                                        <th><%= locals.month[i] %></th>
+                                        <th><%= locals.year[i]%> </th>
+                                    </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 id="charts">Charts</h3>
+                <div id="chartsContainer" class="charts-container hidden">
+                    <div class="chart">
+                        <img src="images/monthly_threshold.jpg" alt="monthly" style="height: 40vh; width: 40vh;">
+                    </div>
+                    <div class="chart">
+                        <img src="images/yearly_threshold.jpg" alt="yearly" style="height: 40vh; width: 40vh;">
+                    </div>
+                </div>
+                <br>
+                <button type="button" onclick="showCharts()">Show Charts</button>
+            </div>
+        </section>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+
+    
+    <script src="/scripts/threshold_setter.js"></script>
+
+</body>
+</html>

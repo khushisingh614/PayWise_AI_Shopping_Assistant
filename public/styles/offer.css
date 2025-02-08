@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@400;700&display=swap');
+
+body {
+    font-family: 'Amazon Ember', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #111;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2em;
+    color: #0a0a09;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.diamond-card {
+    border-color: #b9f2ff;
+    background-color: #e0f7fa;
+}
+
+.gold-card {
+    border-color: #ffd700;
+    background-color: #fff8e1;
+}
+
+.silver-card {
+    border-color: #c0c0c0;
+    background-color: #f5f5f5;
+}
+
+.bronze-card {
+    border-color: #cd7f32;
+    background-color: #fbe9e7;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+.requirements {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    color: #333;
+}

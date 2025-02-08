@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/styles/main_page.css">
+        <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-address border">
+                <p>Hello</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Deliver to India</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option value="">All</option>
+                </select>
+                <input placeholder="Search Amazon" class="input-search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-lang border">
+                <div class="lang">
+                    <i class="fa-solid fa-earth-asia"></i>
+                </div>
+                <select class="lang-options">
+                    <option>EN</option>
+                </select>
+            </div>
+
+            <div class="nav-account border">
+                <p class="account-sign-in">Hello, Khushi & Niket</p>
+                <select class="account-list">
+                    <option>Account & Lists</option>
+                </select>
+            </div>
+
+            <div class="nav-orders border">
+                <p class="place-order"><a href="/orders" style="text-decoration: none; color: white;">Previous Orders</a></p>
+            </div>
+
+            <div class="nav-cart border">
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <a href="/cart" style="color: white; text-decoration: none;">Cart</a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+
+            <div class="panel-options">
+                <a href="" class="border anchor-tag">Today's Deals</a>
+                <a href="" class="border anchor-tag">Customer Service</a>
+                <a href="" class="border anchor-tag">Registry</a>
+                <a href="" class="border anchor-tag">Seller</a>
+                <a href="/threshold_setter" class="border anchor-tag">Threshold Setter</a>
+                <a href="/game_saving" class="border anchor-tag">Savings Dashboard</a>
+                <a href="/educational" class="border anchor-tag">Educational</a>
+                <a href="/feedback" class="border anchor-tag">Feedback</a>
+                <a href="/offer" class="border anchor-tag">Your Offers</a>
+            </div>
+
+            <div class="panel-deals">
+                <a href="/offer" class="border anchor-tag">Saver's Badges : <%= locals.badges %></a>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="hero-section">
+
+    </div>
+
+    <div class="shop-section" style="margin-bottom: 5vh;">
+        <div class="box1 box">
+            <div class="div-content">
+                <p>Health & Personal Care</p>
+                <div class="box-img" style="background-image: url('/images/health.jpg');"></div>
+                <a href="" class="anchor-pro">Shop now</a>
+            </div>
+
+        </div>
+
+        <div class="box2 box">
+            <div class="div-content">
+                <p>Electronics</p>
+                <div class="box-img" style="background-image: url('images/electronics.jpg');"></div>
+                <a href="" class="anchor-pro">See more</a>
+            </div>
+        </div>
+
+        <div class="box3 box">
+            <div class="div-content">
+                <p>For your Fitness Needs</p>
+                <div class="box-img" style="background-image: url('images/fitness.jpg');"></div>
+                <a href="" class="anchor-pro">Shop now</a>
+            </div>
+        </div>
+
+        <div class="box4 box">
+            <div class="div-content">
+                <p>New Arrivals in Toys</p>
+                <div class="box-img" style="background-image: url('images/toys.jpg');"></div>
+                <a href="" class="anchor-pro">Shop now</a>
+            </div>
+        </div>
+
+        <div class="box5 box">
+            <div class="div-content">
+                <p>Home Decorations Under $20</p>
+                <a href="" class="anchor-pro">Shop now</a>
+                <div class="home-decoration">
+                    <img src="images/home_decoration/1.jpg" alt="">
+                    <img src="images/home_decoration/2.jpg" alt="">
+                    <img src="images/home_decoration/3.jpg" alt="">
+                    <img src="images/home_decoration/4.jpg" alt="">
+                    <img src="images/home_decoration/5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <form action="/add_item" method="post" class="box" style="height: fit-content;">
+            <div class="div-content">
+                <p name="item">Aashirvaad Wheat Flour <input type="text" value="Aashirvaad Wheat Flour" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/flour.png');"></div>
+                <h4 name="original_price" >Price : 600<input type="text" value="600" name="Price" style="display: none;"> </h4>
+                
+                <h4 name="badges" >Saver's Badges : 2<input type="text" value="2" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content">
+                <p>Refrigerator<input type="text" value="Refrigerator" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/fridge.png');"></div>
+                <h4>Price : 3600 <input type="text" value="3600" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 100 <input type="text" value="100" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content">
+                <p>Blue Polka Dot Dress<input type="text" value="Blue Polka Dot Dress" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/dress.png');"></div>
+                <h4>Price : 1000 <input type="text" value="1000" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 5 <input type="text" value="5" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content">
+                <p>Smart Watch<input type="text" value="Smart Watch" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/watch.png'); object-fit:cover ;"></div>
+                <h4>Price : 3600 <input type="text" value="3600" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 10 <input type="text" value="10" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+
+         
+
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content" >
+                <p>Water Bottle<input type="text" value="Water Bottle" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/bottle.png');"></div>
+                <h4>Price : 60 <input type="text" value="60" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 0 <input type="text" value="0" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+
+        </form>
+
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content" >
+                <p>Notebooks<input type="text" value="Notebooks" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/notebook.png');"></div>
+                <h4>Price : 150 <input type="text" value="150" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 1 <input type="text" value="1" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content">
+                <p>Medicine<input type="text" value="Medicine" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/medicine.png');"></div>
+                <h4>Price : 320 <input type="text" value="320" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 2 <input type="text" value="2" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+
+        <form action="/add_item"  method="post" class="box" style="height: fit-content;">
+            <div class="div-content">
+                <p>Bag<input type="text" value="Bag" name="item" style="display: none;"></p>
+                <div class="box-img" style="background-image: url('images/bag.png');"></div>
+                <h4>Price : 6000 <input type="text" value="6000" name="Price" style="display: none;"> </h4>
+                <h4>Saver's Badges : 20 <input type="text" value="20" name="Badge" style="display: none;"></h4>
+                <button type="submit">Add to Cart</button>
+            </div>
+        </form>
+    </div>
+
+
+    <%- include("partials/footer.ejs") %>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Chat with Amazon Bot",
+        "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+        "botId": "c629ece7-9900-463e-bfee-d78dd0720e97",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "c629ece7-9900-463e-bfee-d78dd0720e97",
+        "webhookId": "29eb4a67-0add-4342-98f2-5bf0e4d27dd3",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "Amazon Bot",
+        "frontendVersion": "v1",
+        "useSessionStorage": false,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "allowedOrigins": []
+    });
+    </script>
+</body>
+
+</html>
