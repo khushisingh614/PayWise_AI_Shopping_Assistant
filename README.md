@@ -453,7 +453,7 @@ FUTURE SCOPE :
 INSTRUCTIONS FOR LOCALLY SETTING UP THE PROJECT : 
 SETUP :
 1) Clone the repo using
-    git clone https://github.com/Niket714/Amazon-HackOn-Project-Aveanfighters.git
+    git clone https://github.com/khushisingh614/PayWise_AI_Shopping_Assistant
 
 2) Create an env file and replace the varialbles
     PG_USER, PG_HOST, PG_DATABASE, PG_PASSWORD, PG_PORT as "postgres", "localhost", "database_name", "password_postgres", "port_pg"
